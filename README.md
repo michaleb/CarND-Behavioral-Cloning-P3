@@ -73,19 +73,22 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 #### 2. Final Model Architecture
 
 The final model architecture (model.py lines 63-76) consisted of a convolution neural network with the following layers and layer sizes:
-Layer 1 - Covnet - 24 @ 30x158
-Layer 2 - Dropout - 25%
-Layer 3 - Covnet - 36 @ 13x77
-Layer 4 - Dropout - 25%
-Layer 5 - Covnet - 48 @  4x36
-Layer 6 - Dropout - 25%
-Layer 7 - Covnet - 64 @  3x33
-Layer 8 - Covnet - 64 @  1x30
-Layer 9 - Flatten - 1920
-Layer 10 - Dense - 100
-Layer 11 - Dense - 50
-Layer 12 - Dense - 10
-Layer 13 - Dense 1 (output steer angle)
+
+|       | Layer         |Output Channels        |Size |
+|:----:|:-----------|:-------------:|:----------------:|
+|1| Convnet | 24  | 30x158|
+|2| Dropout 25% |   -    |    -    |
+|3| Convnet | 36  | 13x77  |
+|4| Dropout 25% |   -    |   -    |
+|5| Convnet  | 48  | 4x36  |
+|6| Dropout 25% |  -  |  -  |
+|7| Convnet | 64  | 3x33  |
+|8| Convnet | 64  | 1x30  |
+|9| Flatten |  1   | 1920  |
+|10 | Dense  |  1   | 100   |
+|11 | Dense  |  1   | 50    |
+|12 | Dense  |  1   | 10    |
+|13 | Dense  |  1   | 1 (output steer angle)|
 
 
 #### 3. Creation of the Training Set & Training Process
